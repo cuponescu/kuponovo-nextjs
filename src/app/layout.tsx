@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Noto_Sans, Corben } from 'next/font/google'
+import { Noto_Sans, Kelly_Slab } from 'next/font/google'
 import './globals.css'
 import { HeaderWrapper } from '@/components/HeaderWrapper'
 import { Footer } from '@/components/Footer'
@@ -15,10 +15,11 @@ const notoSans = Noto_Sans({
   display: 'swap',
 })
 
-const corben = Corben({
-  subsets: ['latin'],
+const kellySlab = Kelly_Slab({
+  subsets: ['latin', 'latin-ext', 'cyrillic'],
   weight: '400',
   variable: '--font-corben',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -41,7 +42,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="bg" suppressHydrationWarning>
-      <body className={`${notoSans.variable} ${corben.variable} font-sans bg-[#012c3b]`}>
+      <body className={`${notoSans.variable} ${kellySlab.variable} font-sans bg-[#012c3b]`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
