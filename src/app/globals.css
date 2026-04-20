@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47% 11%;
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 47% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 142 76% 36%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-corben), serif;
+  }
+}
+
+/* CSS-only modal using :target - works without JavaScript */
+.modal-css-only {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: none;
+  pointer-events: none;
+  scroll-margin: 0;
+}
+
+.modal-css-only:target:not(.hidden) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+.modal-css-only.hidden {
+  display: none !important;
+  pointerevents: none !important;
+}
+
+/* Prevent scroll when modal is open */
+html:has(.modal-css-only:target:not(.hidden)) {
+  overflow: hidden;
+}
+
+.modal-css-only .modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 49;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-css-only:target .modal-overlay {
+  display: block;
+}
+
+.modal-css-only .modal-wrapper {
+  position: relative;
+  z-index: 50;
+  width: 100%;
+  max-width: 28rem;
+  margin: 1rem;
+  pointer-events: none;
+}
+
+.modal-css-only:target .modal-wrapper {
+  pointer-events: auto;
+}
+
+.modal-css-only .modal-wrapper > div {
+  pointer-events: auto;
+}
+
+/* Custom font size overrides */
+.text-2xl {
+  font-size: 1.2rem;
+}
+
+/* Reduce tabs content padding on store pages */
+.pt-8 {
+  padding-top: 1rem;
+}
