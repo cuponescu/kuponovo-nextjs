@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export function Footer() {
   return (
-    <footer className="bg-[#012c3b] rounded-t-[35px] md:rounded-t-[45px] relative z-10 mx-3 md:mx-6 lg:mx-8">
+    <footer className="bg-[#012c3b] rounded-t-[35px] md:rounded-t-[45px] relative z-10">
       <div className="container mx-auto px-4 py-12">
         {/* First row: Logo left, Social Media icons right */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-8 sm:gap-6 pb-8 border-b border-white/20">
