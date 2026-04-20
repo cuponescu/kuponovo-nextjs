@@ -266,21 +266,6 @@ export function Header({ stores }: HeaderProps) {
             )}
           </div>
 
-          {/* Chrome Extension CTA - Desktop only */}
-          <Link
-            href="/razshirenie"
-            className="hidden md:inline-flex items-center gap-2 px-4 py-2.5 bg-[#5bd72c] text-[#0d2245] text-sm font-semibold rounded-lg hover:bg-[#4ec225] transition-colors"
-          >
-            <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
-              <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.5" />
-              <path d="M21.17 8H12" stroke="currentColor" strokeWidth="1.5" />
-              <path d="M3.95 6.06L8.54 14" stroke="currentColor" strokeWidth="1.5" />
-              <path d="M10.88 21.94L15.46 14" stroke="currentColor" strokeWidth="1.5" />
-            </svg>
-            Добави в Chrome
-          </Link>
-
           {/* Mobile Search Icon & Menu Button */}
           <div className="md:hidden flex items-center gap-2">
             <button

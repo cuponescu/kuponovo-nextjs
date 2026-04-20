@@ -24,7 +24,7 @@ export function Footer() {
         </div>
 
         {/* Second row: columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {/* Copyright */}
           <div className="space-y-4">
             <p className="text-sm text-white">© {new Date().getFullYear()} Kuponovo.bg. Всички права запазени.</p>
@@ -79,14 +79,6 @@ export function Footer() {
                   className="hover:text-[#5bd72c] transition-colors"
                 >
                   Блог
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/razshirenie"
-                  className="hover:text-[#5bd72c] transition-colors"
-                >
-                  Безплатно разширение за Chrome
                 </Link>
               </li>
             </ul>
@@ -155,25 +147,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Chrome CTA */}
-          <div className="space-y-4">
-            <p className="text-sm font-medium text-white">
-              Инсталирай безплатното ни разширение за Chrome
-            </p>
-            <Link
-              href="/razshirenie"
-              className="flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-white text-[#0d2245] text-sm font-semibold rounded-lg hover:bg-[#5bd72c] hover:text-[#0d2245] transition-colors"
-            >
-              <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
-                <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.5" />
-                <path d="M21.17 8H12" stroke="currentColor" strokeWidth="1.5" />
-                <path d="M3.95 6.06L8.54 14" stroke="currentColor" strokeWidth="1.5" />
-                <path d="M10.88 21.94L15.46 14" stroke="currentColor" strokeWidth="1.5" />
-              </svg>
-              Добави в Chrome
-            </Link>
-          </div>
         </div>
       </div>
     </footer>
