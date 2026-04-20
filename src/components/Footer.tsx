@@ -14,7 +14,7 @@ export function Footer() {
             href="/"
             className="inline-flex items-center hover:opacity-80 transition-opacity"
           >
-            <Image src="/Kuponovo_one_color.svg" alt="Kuponovo" width={180} height={40} className="h-10 w-auto" />
+            <Image src="/Kuponovo_white.svg" alt="Kuponovo" width={180} height={40} className="h-10 w-auto" />
           </Link>
 
           {/* Social Media Icons - placeholders; update hrefs when social accounts exist */}
