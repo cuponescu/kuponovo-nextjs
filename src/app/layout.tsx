@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Noto_Sans, Kelly_Slab } from 'next/font/google'
+import { Noto_Sans, Noto_Serif } from 'next/font/google'
 import './globals.css'
 import { HeaderWrapper } from '@/components/HeaderWrapper'
 import { Footer } from '@/components/Footer'
@@ -15,9 +15,9 @@ const notoSans = Noto_Sans({
   display: 'swap',
 })
 
-const kellySlab = Kelly_Slab({
+const notoSerif = Noto_Serif({
   subsets: ['latin', 'latin-ext', 'cyrillic'],
-  weight: '400',
+  weight: ['400', '700'],
   variable: '--font-corben',
   display: 'swap',
 })
@@ -25,6 +25,9 @@ const kellySlab = Kelly_Slab({
 export const metadata: Metadata = {
   title: 'Kuponovo.bg - Купони и промо кодове, обновявани всеки ден',
   description: 'Ние сме малък, но всеотдаен екип, който всеки ден търси нови купони и активни промоции в онлайн магазините в България.',
+  verification: {
+    google: '5n2mDn2Ex_ev-t1sLpGYUqlYgTCtm8gV-DlG-vy5MXY',
+  },
   robots: {
     index: true,
     follow: true,
@@ -42,7 +45,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="bg" suppressHydrationWarning>
-      <body className={`${notoSans.variable} ${kellySlab.variable} font-sans bg-[#012c3b]`}>
+      <body className={`${notoSans.variable} ${notoSerif.variable} font-sans bg-[#012c3b]`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
