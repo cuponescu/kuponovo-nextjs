@@ -165,8 +165,8 @@ export async function generateMetadata({ params }: PageProps) {
     }
   });
 
-  // Build title: Промо код {Store} -{highest}% (+още N купона) | {Month} {Year}
-  let title = `Промо код ${store.name}`;
+  // Build title: {Store} кодове за отстъпки -{highest}% (+още N купона) | {Month} {Year}
+  let title = `${store.name} кодове за отстъпки`;
   const couponCount = activeStoreCoupons.length;
   const othersCount = couponCount - 1;
 
@@ -185,9 +185,9 @@ export async function generateMetadata({ params }: PageProps) {
   }
 
   if (discountStr) {
-    title = `Промо код ${store.name} ${discountStr}${othersStr} | ${currentMonthShort} ${currentYear}`;
+    title = `${store.name} кодове за отстъпки ${discountStr}${othersStr} | ${currentMonthShort} ${currentYear}`;
   } else {
-    title = `Промо код ${store.name}${othersStr} | ${currentMonthShort} ${currentYear}`;
+    title = `${store.name} кодове за отстъпки${othersStr} | ${currentMonthShort} ${currentYear}`;
   }
 
   const numberOfCoupons = activeStoreCoupons.length;
@@ -197,7 +197,7 @@ export async function generateMetadata({ params }: PageProps) {
       : `${allDiscounts[allDiscounts.length - 1].value} лв`)
     : '';
 
-  let description = `${numberOfCoupons} промо кода за ${store.name} те очакват тук!`;
+  let description = `${numberOfCoupons} кода за отстъпки от ${store.name} те очакват тук!`;
   if (highestValueStr) {
     description += ` Спести ${highestValueStr} при следващата си поръчка с купон от ${store.name}.`;
   }

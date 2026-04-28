@@ -314,7 +314,7 @@ export function StorePage({ store, activeCoupons, expiredCoupons, relatedStores 
 
             {/* Store Info */}
             <div className="flex-1 flex flex-col gap-0.5 md:gap-1.5 md:h-[10rem]">
-              <h1 className="text-[1.4rem] leading-snug md:text-3xl font-medium -mt-0.5 md:mt-0">Промо код {store.name}</h1>
+              <h1 className="text-[1.4rem] leading-snug md:text-3xl font-medium -mt-0.5 md:mt-0">{store.name} кодове за отстъпки</h1>
               
               {/* Rating */}
               <div className="flex items-center gap-2">

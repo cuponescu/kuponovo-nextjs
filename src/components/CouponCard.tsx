@@ -406,7 +406,7 @@ export function CouponCard({ coupon, placement = 'grid' }: CouponCardProps) {
                 }}
                 className="block text-xs text-center text-muted-foreground hover:text-foreground underline mb-2"
               >
-                {coupon.type === 'code' ? 'Промо код' : 'Оферта'} {coupon.storeName}
+                {coupon.type === 'code' ? `${coupon.storeName} кодове за отстъпки` : `Оферта ${coupon.storeName}`}
               </Link>
             )}
           </div>

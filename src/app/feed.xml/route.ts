@@ -17,7 +17,7 @@ export async function GET() {
   const items = sorted.map((store) => {
     const pubDate = new Date(store.modifiedAt!).toUTCString();
     return `    <item>
-      <title>${escapeXml(`Промо код ${store.name}`)}</title>
+      <title>${escapeXml(`${store.name} кодове за отстъпки`)}</title>
       <link>https://kuponovo.bg/magazin/${store.slug}</link>
       <pubDate>${pubDate}</pubDate>
       <guid>https://kuponovo.bg/magazin/${store.slug}</guid>

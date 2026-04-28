@@ -39,7 +39,7 @@ export function StoreSchema({ store }: StoreSchemaProps) {
     "url": `https://kuponovo.bg/magazin/${store.slug}`,
     "logo": store.logo,
     "image": store.logo,
-    "description": store.description || `Промо кодове и купони ${store.name}`,
+    "description": store.description || `${store.name} кодове за отстъпки и купони`,
     ...(store.rating && {
       "aggregateRating": {
         "@type": "AggregateRating",
