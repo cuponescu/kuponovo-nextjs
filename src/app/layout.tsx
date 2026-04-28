@@ -5,7 +5,7 @@ import { HeaderWrapper } from '@/components/HeaderWrapper'
 import { Footer } from '@/components/Footer'
 import { Toaster } from '@/components/ui/sonner'
 import { ThemeProvider } from '@/components/theme-provider'
-import { Analytics } from '@vercel/analytics/react'
+import { Analytics } from '@vercel/analytics/next'
 import { CookieConsent } from '@/components/CookieConsent'
 
 const notoSans = Noto_Sans({
